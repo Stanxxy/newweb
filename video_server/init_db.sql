@@ -2,14 +2,14 @@ CREATE DATABASE video_server;
 USE video_server;
 
 CREATE TABLE IF NOT EXISTS `users` (
-    id UNSIGNED INT PRIMARY KEY AUTO_INCREMENT,
+    id INT UNSIGNED PRIMARY KEY AUTO_INCREMENT,
     login_name VARCHAR(64) UNIQUE KEY,
     pwd TEXT
 );
 
 CREATE TABLE IF NOT EXISTS `video_info` (
     id VARCHAR(64) PRIMARY KEY NOT NULL,
-    author_id UNSIGNED INT,
+    author_id INT UNSIGNED,
     name TEXT,
     display_ctime TEXT,
     create_time DATETIME
@@ -18,7 +18,7 @@ CREATE TABLE IF NOT EXISTS `video_info` (
 CREATE TABLE IF NOT EXISTS `comments` (
     id VARCHAR(64) PRIMARY KEY NOT NULL,
     video_id VARCHAR(64),
-    author_id UNSIGNED INT,
+    author_id INT UNSIGNED,
     content TEXT,
     time DATETIME
 );
