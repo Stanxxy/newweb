@@ -1,4 +1,4 @@
-CREATE DATABASE video_server;
+CREATE DATABASE IF NOT EXISTS video_server;
 USE video_server;
 
 CREATE TABLE IF NOT EXISTS `users` (
